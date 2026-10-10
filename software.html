@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';}catch(e){}</script>
+    <title>Software – Jean-Victor Alipour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <a href="index.html" class="logo">Jean-Victor Alipour</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Research</a></li>
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="software.html" class="active">Software</a></li>
+                <li><a href="https://www.dropbox.com/s/2stp2odd8hpdz7d/CV_alipour.pdf?dl=0" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg><span class="theme-label">Dark</span></button>
+            <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </div>
+
+    <main class="main-container">
+        <h2 class="section-title">Software</h2>
+        <p class="page-intro">Open-source tools for empirical research. All code is on <a href="https://github.com/jvali1" target="_blank" rel="noopener">GitHub</a>.</p>
+        <ul class="entry-list">
+            <li>
+                <a class="entry-title software-name" href="https://github.com/jvali1/pullregiostat" target="_blank" rel="noopener">PullRegiostat</a>
+                <span class="entry-meta">Python client for the <a href="https://www.regionalstatistik.de/" target="_blank" rel="noopener">Regionalstatistik</a> API, Germany's official regional statistics portal, operated by the Federal and State Statistical Offices.</span>
+            </li>
+            <li>
+                <a class="entry-title software-name" href="https://github.com/jvali1/stata-samefile" target="_blank" rel="noopener">samefile</a>
+                <span class="entry-meta">Stata wrapper for a Python routine that checks whether two files are identical based on their hash values.</span>
+            </li>
+            <li>
+                <a class="entry-title software-name" href="https://github.com/jvali1/stata-grconst" target="_blank" rel="noopener">grconst</a>
+                <span class="entry-meta">Stata module to check whether a variable is constant within groups, flag conflicts, and fill in missing values.</span>
+            </li>
+            <li>
+                <a class="entry-title software-name" href="https://github.com/jvali1/stata-adoactive" target="_blank" rel="noopener">adoactive</a>
+                <span class="entry-meta">Stata module to identify and return a list of user-written Stata commands called in a do-file.</span>
+            </li>
+            <li>
+                <a class="entry-title software-name" href="https://github.com/jvali1/stata-pushmess" target="_blank" rel="noopener">pushmess</a>
+                <span class="entry-meta">Stata module for sending push notifications using the PushNotifier app.</span>
+            </li>
+        </ul>
+
+        <footer class="site-footer">
+            <p>Jean-Victor Alipour · ifo Institute, Poschingerstr. 5, 81679 Munich</p>
+            <p><a href="mailto:alipour@ifo.de">alipour@ifo.de</a></p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
