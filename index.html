@@ -5,31 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.dataset.theme='dark';}catch(e){}</script>
     <title>Jean-Victor Alipour</title>
-    <meta name="description" content="Jean-Victor Alipour, economist at the ifo Institute and LMU Munich. Research on the future of work, remote work, AI, and the political economy of the digital age.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Jean-Victor Alipour is an economist at the ifo Institute and LMU Munich working on remote work, AI, the future of work, and political economy.">
+    <meta name="author" content="Jean-Victor Alipour">
+    <link rel="canonical" href="https://jv-alipour.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Jean-Victor Alipour">
+    <meta property="og:title" content="Jean-Victor Alipour">
+    <meta property="og:description" content="Jean-Victor Alipour is an economist at the ifo Institute and LMU Munich working on remote work, AI, the future of work, and political economy.">
+    <meta property="og:url" content="https://jv-alipour.github.io/">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#f6f3ec">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231f4e79'/%3E%3Ctext x='16' y='21.5' font-family='Georgia,serif' font-size='13' fill='white' text-anchor='middle'%3EJVA%3C/text%3E%3C/svg%3E">
+    <link rel="preload" href="fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/crimson-text-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Jean-Victor Alipour", "jobTitle": "Assistant Professor of Economics", "affiliation": [{"@type": "ResearchOrganization", "name": "ifo Institute for Economic Research", "url": "https://www.ifo.de/en"}, {"@type": "CollegeOrUniversity", "name": "LMU Munich", "url": "https://www.lmu.de/en/"}], "alumniOf": [{"@type": "CollegeOrUniversity", "name": "LMU Munich"}, {"@type": "CollegeOrUniversity", "name": "Bocconi University"}], "email": "mailto:alipour@ifo.de", "url": "https://jv-alipour.github.io/", "knowsAbout": ["Remote work", "Working from home", "Artificial intelligence", "Future of work", "Political economy", "Labor economics"], "sameAs": ["https://scholar.google.de/citations?user=8fLAH6QAAAAJ", "https://www.ifo.de/en/alipour-j", "https://www.cesifo.org/en/network-member/alipour-jean-victor", "https://www.linkedin.com/in/jean-victor-alipour", "https://bsky.app/profile/jvali.bsky.social", "https://twitter.com/AlipourJv", "https://github.com/jvali1"]}</script>
 </head>
 <body>
-    <div class="nav-container">
-        <nav>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav-container">
+        <nav class="site-nav" aria-label="Main">
             <a href="index.html" class="logo">Jean-Victor Alipour</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Research</a></li>
+                <li><a href="index.html" aria-current="page">Research</a></li>
                 <li><a href="policy.html">Policy</a></li>
                 <li><a href="media.html">Media</a></li>
                 <li><a href="software.html">Software</a></li>
-                <li><a href="https://www.dropbox.com/s/2stp2odd8hpdz7d/CV_alipour.pdf?dl=0" target="_blank" rel="noopener">CV</a></li>
+                <li><a href="https://www.dropbox.com/s/2stp2odd8hpdz7d/CV_alipour.pdf?raw=1" target="_blank" rel="noopener">CV</a></li>
             </ul>
             <button class="theme-toggle" type="button" aria-label="Switch to dark theme"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg><span class="theme-label">Dark</span></button>
             <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </nav>
-    </div>
+    </header>
 
-    <main class="main-container">
+    <main class="main-container" id="main">
         <div class="hero">
             <div class="profile-section">
                 <img src="img/portrait.jpg" alt="Portrait of Jean-Victor Alipour" class="profile-img" width="600" height="800">
@@ -39,142 +50,172 @@
                 <div class="aff-rows">
                     <div class="aff"><b>ifo Institute &amp; LMU Munich</b><span>Assistant Professor of Economics (non-tenure track)</span></div>
                     <div class="aff"><b>CESifo</b><span>Network Member</span></div>
-                    <div class="aff"><span class="aff-label">Elsewhere</span><span class="aff-links"><a href="mailto:alipour@ifo.de">Email</a><a href="https://scholar.google.de/citations?hl=de&amp;user=8fLAH6QAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a href="https://www.linkedin.com/in/jean-victor-alipour" target="_blank" rel="noopener">LinkedIn</a><a href="https://bsky.app/profile/jvali.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://twitter.com/AlipourJv" target="_blank" rel="noopener">X</a><a href="https://github.com/jvali1" target="_blank" rel="noopener">GitHub</a></span></div>
+                    <div class="aff"><span class="aff-label">Elsewhere</span><span class="aff-links"><a href="https://www.ifo.de/en/alipour-j" target="_blank" rel="noopener">ifo profile</a><a href="https://www.linkedin.com/in/jean-victor-alipour" target="_blank" rel="noopener">LinkedIn</a><a href="https://bsky.app/profile/jvali.bsky.social" target="_blank" rel="noopener">Bluesky</a><a href="https://twitter.com/AlipourJv" target="_blank" rel="noopener">X</a><a href="https://github.com/jvali1" target="_blank" rel="noopener">GitHub</a></span></div>
+                </div>
+                <div class="cta">
+                    <a class="btn btn-primary" href="https://www.dropbox.com/s/2stp2odd8hpdz7d/CV_alipour.pdf?raw=1" target="_blank" rel="noopener">CV (PDF)</a>
+                    <a class="btn" href="mailto:alipour@ifo.de">Email</a>
+                    <a class="btn" href="https://scholar.google.de/citations?user=8fLAH6QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
                 </div>
 
+                <p class="keywords">Remote work · AI · Future of work · Political economy</p>
                 <div class="bio">
-                    <p>I am an Assistant Professor in Economics (non-tenure track) at the <a href="https://www.ifo.de/en" target="_blank" rel="noopener">ifo Institute for Economic Research</a> and <a href="https://www.en.econ.uni-muenchen.de/news/index.html" target="_blank" rel="noopener">LMU Munich</a>, and a <a href="https://www.cesifo.org/en/network-member/alipour-jean-victor" target="_blank" rel="noopener">CESifo</a> Network member. I completed my PhD at LMU Munich in 2023, including a one-year research stay at the <a href="https://www.econ.cam.ac.uk/" target="_blank" rel="noopener">University of Cambridge</a>.</p>
                     <p>I study the consequences of the digital transformation for the future of work and the political economy of the digital age. I am particularly interested in the impact of the Big Shift to remote work and the spread of AI, and in how technological change can be managed to benefit organizations, individuals, and society.</p>
-                    <p>My research is partly funded by the Deutsche Forschungsgemeinschaft through <a href="https://rationality-and-competition.de/projects/b-firms/b10/" target="_blank" rel="noopener">CRC TRR 190</a> (project no. 280092119) and has received broad <a href="media.html">press coverage</a>.</p>
+                    <p>I completed my PhD at <a href="https://www.en.econ.uni-muenchen.de/news/index.html" target="_blank" rel="noopener">LMU Munich</a> in 2023, including a one-year research stay at the <a href="https://www.econ.cam.ac.uk/" target="_blank" rel="noopener">University of Cambridge</a>. My research is partly funded by the Deutsche Forschungsgemeinschaft through <a href="https://rationality-and-competition.de/projects/b-firms/b10/" target="_blank" rel="noopener">CRC TRR 190</a> (project no. 280092119) and has received broad <a href="media.html">press coverage</a>.</p>
                 </div>
             </div>
         </div>
 
-        <nav class="section-index" aria-label="Sections">
+        <nav class="section-index" aria-label="On this page">
             <a href="#publications"><span>01</span>Publications</a>
-            <a href="#work-in-progress"><span>02</span>Work in Progress</a>
-            <a href="policy.html"><span>03</span>Policy Writing</a>
-            <a href="media.html"><span>04</span>In the Media</a>
+            <a href="#working-papers"><span>02</span>Working Papers</a>
+            <a href="#work-in-progress"><span>03</span>Work in Progress</a>
         </nav>
 
         <h2 class="section-title" id="publications">Publications</h2>
-
         <article class="paper-item">
-            <h3 class="paper-title"><a href="https://www.journals.uchicago.edu/doi/10.1086/732243" target="_blank" rel="noopener">No Surprises, Please: Voting Costs and Electoral Turnout</a></h3>
-            <div class="paper-authors">with Valentin Lindlacher (TU Dresden)</div>
-            <div class="paper-venue"><em>Journal of Political Economy: Microeconomics</em>, 2025</div>
+            <h3 class="paper-title"><a href="https://doi.org/10.1086/732243" target="_blank" rel="noopener">No Surprises, Please: Voting Costs and Electoral Turnout</a></h3>
+            <div class="paper-authors">with <a href="https://lindlacher.com/" target="_blank" rel="noopener">Valentin Lindlacher</a> (TU Dresden)</div>
+            <div class="paper-venue"><em>Journal of Political Economy: Microeconomics</em>, 3(1), 59–97, 2025</div>
             <div class="paper-links">
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-voting">Abstract</button>
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="bib-voting">BibTeX</button>
                 <a href="https://doi.org/10.7910/DVN/MHHNJV" target="_blank" rel="noopener">Replication files</a>
                 <a href="https://www.cesifo.org/DocDL/econpol-forum-2024-4-alipour-lindlacher-well-intended-measures.pdf" target="_blank" rel="noopener">EconPol Forum summary</a>
             </div>
+            <div class="paper-abstract" id="abs-voting" hidden="until-found">Can well-intentioned policies create barriers to voting? Election administrators in Munich (Germany) recruit new polling places and control precinct sizes to improve voting accessibility, creating variation in the assignment of citizens to polling locations. Event study estimates suggest that polling place reassignments cause a persistent shift from in-person to mail-in voting and a transitory drop in total turnout of 0.4 percentage points (0.6%). The results are consistent with inattention to reassignments, causing some voters to miss requesting mail-in ballots and temporarily abstain from voting. Reassignments depress turnout more in elderly-heavy precincts and when distance to the polling location increases.</div>
+            <pre class="paper-bibtex" id="bib-voting" hidden="until-found">@article{AlipourLindlacher2025,
+  title   = {No Surprises, Please: Voting Costs and Electoral Turnout},
+  author  = {Alipour, Jean-Victor and Lindlacher, Valentin},
+  journal = {Journal of Political Economy Microeconomics},
+  volume  = {3},
+  number  = {1},
+  pages   = {59--97},
+  year    = {2025},
+  doi     = {10.1086/732243}
+}</pre>
         </article>
-
         <article class="paper-item">
-            <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S0014292122002343" target="_blank" rel="noopener">Germany's Capacity to Work from Home</a></h3>
+            <h3 class="paper-title"><a href="https://doi.org/10.1016/j.euroecorev.2022.104354" target="_blank" rel="noopener">Germany&#x27;s Capacity to Work from Home</a></h3>
             <div class="paper-authors">with Oliver Falck (LMU) and Simone Schüller (DJI)</div>
-            <div class="paper-venue"><em>European Economic Review</em>, 2023</div>
+            <div class="paper-venue"><em>European Economic Review</em>, 151, 104354, 2023</div>
             <div class="paper-links">
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-capacity">Abstract</button>
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="bib-capacity">BibTeX</button>
+                <a href="https://www.ifo.de/DocDL/cesifo1_wp8227.pdf" target="_blank" rel="noopener">Ungated (CESifo WP)</a>
                 <a href="https://github.com/jvali1/Alipouretal_WFH_Germany" target="_blank" rel="noopener">Data</a>
             </div>
+            <div class="paper-abstract" id="abs-capacity" hidden="until-found">We propose an index of working from home (WFH) capacity for the German economy, drawing on rich survey and administrative data. We find that 56 percent of jobs are WFH feasible, most of which are located in urban areas and in highly digitized industries. Using individual-level data on tasks and work conditions, we show that heterogeneity in WFH feasibility is largely explained by differences in task content. WFH feasible jobs are typically characterized by cognitive, non-manual tasks, and PC usage. We compare our survey-based measure with popular task-based measures of WFH capacity, which usually rely on determining tasks that are incompatible with WFH, and show that task-based approaches capture variation in WFH capacity across occupations fairly accurately. A simple measure of PC use intensity will generally constitute a suitable proxy for WFH capacity. Finally, we demonstrate that our WFH index is a strong predictor of actual WFH outcomes during the Covid-19 crisis and discuss applications in the context of the pandemic and the future of work.</div>
+            <pre class="paper-bibtex" id="bib-capacity" hidden="until-found">@article{AlipourFalckSchueller2023,
+  title   = {Germany&#x27;s Capacity to Work from Home},
+  author  = {Alipour, Jean-Victor and Falck, Oliver and Sch{\&quot;u}ller, Simone},
+  journal = {European Economic Review},
+  volume  = {151},
+  pages   = {104354},
+  year    = {2023},
+  doi     = {10.1016/j.euroecorev.2022.104354}
+}</pre>
+        </article>
+        <article class="paper-item">
+            <h3 class="paper-title"><a href="https://doi.org/10.1016/j.jpubeco.2021.104373" target="_blank" rel="noopener">My Home is My Castle – The Benefits of Working from Home during a Pandemic Crisis</a></h3>
+            <div class="paper-authors">with Harald Fadinger (U Mannheim) and Jan Schymik (U Mannheim)</div>
+            <div class="paper-venue"><em>Journal of Public Economics</em>, 196, 104373, 2021</div>
+            <div class="paper-links">
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-castle">Abstract</button>
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="bib-castle">BibTeX</button>
+            </div>
+            <div class="paper-meta"><span class="meta-label">Coverage:</span> <a href="https://zeitung.faz.net/fas/wirtschaft/2021-01-10/bleibt-endlich-im-homeoffice/555913.html?GEPC=s3" target="_blank" rel="noopener">FAZ (1)</a>, <a href="https://zeitung.faz.net/faz/wirtschaft/2020-06-22/ab-ins-homeoffice/473525.html" target="_blank" rel="noopener">FAZ (2)</a>, <a href="https://www.tagesschau.de/multimedia/sendung/ts-41135.html" target="_blank" rel="noopener">ARD Tagesschau</a>, <a href="https://www.spiegel.de/wirtschaft/unternehmen/wie-viel-mehr-homeoffice-vertraegt-die-deutsche-wirtschaft-a-0cdc3614-f371-4af4-8505-c735eb9fa333" target="_blank" rel="noopener">DER SPIEGEL</a>, <a href="https://www.zeit.de/2021/03/arbeiten-corona-krise-homeoffice-pflicht-infektionen-arbeitsplatz" target="_blank" rel="noopener">DIE ZEIT</a>, <a href="https://www.oekonomenstimme.org/artikel/2020/07/homeoffice--ein-allheilmittel-in-der-coronakrise-und-auch-danach/" target="_blank" rel="noopener">Ökonomenstimme</a>, <a href="https://www.bild.de/politik/inland/politik-inland/vor-corona-gipfel-professor-fordert-temporaere-homeoffice-pflicht-in-deutschland-74949860.bild.html" target="_blank" rel="noopener">BILD</a>, <a href="https://www.rtl.de/cms/studie-zeigt-nur-1-prozent-mehr-im-homeoffice-8-prozent-weniger-corona-infektionen-4682693.html" target="_blank" rel="noopener">RTL</a>, <a href="https://www.handelsblatt.com/meinung/homo-oeconomicus/gastkommentar-homo-oeconomicus-homeoffice-macht-produktiver-und-kann-trotzdem-der-karriere-schaden/28345126.html" target="_blank" rel="noopener">Handelsblatt</a></div>
+            <div class="paper-abstract" id="abs-castle" hidden="until-found">This paper studies the impact of working from home (WFH) on work relations and public health during the COVID-19 pandemic in Germany. Combining administrative data on SARS-CoV-2 infections and short-time work registrations, firm- and employee-level surveys and cell phone tracking data on mobility patterns, we find that WFH effectively shields employees from short-time work, firms from COVID-19 distress and substantially reduces infection risks. Counties with a higher share of teleworkable jobs experience fewer short-time work registrations and less SARS-CoV-2 cases. At the firm level, an exogenous increase in the take-up of WFH reduces the probability of filing for short-time work by up to 72 p.p. and the probability of being very negatively affected by the crisis by up to 75 p.p. Health benefits of WFH appeared mostly in the early stage of the pandemic and became smaller once tight confinement rules were implemented. This effect was driven by lower initial mobility levels in counties with more teleworkable jobs and a subsequent convergence in traffic levels once confinement was implemented. Our results imply that confinement and incentivizing WFH are substitutive policies to slow the spread of the coronavirus.</div>
+            <pre class="paper-bibtex" id="bib-castle" hidden="until-found">@article{AlipourFadingerSchymik2021,
+  title   = {My Home is My Castle -- The Benefits of Working from Home during a Pandemic Crisis},
+  author  = {Alipour, Jean-Victor and Fadinger, Harald and Schymik, Jan},
+  journal = {Journal of Public Economics},
+  volume  = {196},
+  pages   = {104373},
+  year    = {2021},
+  doi     = {10.1016/j.jpubeco.2021.104373}
+}</pre>
         </article>
 
+        <h2 class="section-title" id="working-papers">Working Papers</h2>
         <article class="paper-item">
-            <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S0047272721000098" target="_blank" rel="noopener">My Home is My Castle – The Benefits of Working from Home during a Pandemic Crisis</a></h3>
-            <div class="paper-authors">with Harald Fadinger (U Mannheim) and Jan Schymik (U Mannheim)</div>
-            <div class="paper-venue"><em>Journal of Public Economics</em>, 2021</div>
-            <div class="paper-meta"><span class="meta-label">Coverage:</span>
-                <a href="https://zeitung.faz.net/fas/wirtschaft/2021-01-10/bleibt-endlich-im-homeoffice/555913.html?GEPC=s3" target="_blank" rel="noopener">FAZ (1)</a>,
-                <a href="https://zeitung.faz.net/faz/wirtschaft/2020-06-22/ab-ins-homeoffice/473525.html" target="_blank" rel="noopener">FAZ (2)</a>,
-                <a href="https://www.tagesschau.de/multimedia/sendung/ts-41135.html" target="_blank" rel="noopener">ARD Tagesschau</a> (22.01.2021),
-                <a href="https://www.spiegel.de/wirtschaft/unternehmen/wie-viel-mehr-homeoffice-vertraegt-die-deutsche-wirtschaft-a-0cdc3614-f371-4af4-8505-c735eb9fa333" target="_blank" rel="noopener">DER SPIEGEL</a>,
-                <a href="https://www.zeit.de/2021/03/arbeiten-corona-krise-homeoffice-pflicht-infektionen-arbeitsplatz" target="_blank" rel="noopener">DIE ZEIT</a>,
-                <a href="https://www.oekonomenstimme.org/artikel/2020/07/homeoffice--ein-allheilmittel-in-der-coronakrise-und-auch-danach/" target="_blank" rel="noopener">Ökonomenstimme</a>,
-                <a href="https://www.bild.de/politik/inland/politik-inland/vor-corona-gipfel-professor-fordert-temporaere-homeoffice-pflicht-in-deutschland-74949860.bild.html" target="_blank" rel="noopener">BILD</a>,
-                <a href="https://www.rtl.de/cms/studie-zeigt-nur-1-prozent-mehr-im-homeoffice-8-prozent-weniger-corona-infektionen-4682693.html" target="_blank" rel="noopener">RTL</a>,
-                <a href="https://www.handelsblatt.com/meinung/homo-oeconomicus/gastkommentar-homo-oeconomicus-homeoffice-macht-produktiver-und-kann-trotzdem-der-karriere-schaden/28345126.html" target="_blank" rel="noopener">Handelsblatt</a>
+            <h3 class="paper-title"><a href="https://www.dropbox.com/scl/fi/vyzxwypgb00c3notmcb9o/alipour_wfh_gender_inequality.pdf?rlkey=23vs390fje2y57ixplmuopv2r&amp;st=fsbh10rp&amp;raw=1" target="_blank" rel="noopener">Does Remote Work Reinforce Gender Gaps in (Un)paid Labor?</a></h3>
+            <div class="paper-authors">Single-authored</div>
+            <div class="paper-state"><span class="paper-status">Preparing for resubmission</span> <em class="status-journal">Journal of Human Resources</em></div>
+            <div class="paper-links">
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-gender">Abstract</button>
+                <a href="https://www.dropbox.com/scl/fi/vyzxwypgb00c3notmcb9o/alipour_wfh_gender_inequality.pdf?rlkey=23vs390fje2y57ixplmuopv2r&amp;st=fsbh10rp&amp;raw=1" target="_blank" rel="noopener">Paper (PDF)</a>
             </div>
+            <div class="paper-abstract" id="abs-gender" hidden="until-found">I study how the rise in working from home (WFH) affects the gender division of paid and unpaid labor (caregiving, domestic tasks). Identification uses differences in individuals' exposure to the Covid-induced WFH shock, measured by the WFH feasibility of their job in 2019. Using panel data from the German SOEP, I estimate 2SLS models that instrument realized WFH in 2022 with WFH feasibility. Results show that WFH reduces paid hours and increases domestic work and leisure (including sleep) among women. Men's time use remains largely unchanged, partly because WFH induces moves toward larger, more distant homes, offsetting commuting time savings. Within-couple analyses confirm that the Big Shift to WFH intensifies gender gaps in paid and unpaid work, particularly caregiving. I find that gender norms, bargaining power, and childcare demands interact with WFH in ways that reinforce the unequal division of labor.</div>
+        </article>
+        <article class="paper-item">
+            <h3 class="paper-title"><a href="https://www.dropbox.com/scl/fi/5r0s4dh3giys8pem7pdu1/Alipour_etal_revaluing_proximity.pdf?rlkey=8tjshege9smi8tcfhgu2yjkjz&amp;raw=1" target="_blank" rel="noopener">Revaluing Proximity: Working from Home and the Spatial Distribution of Urban Housing Prices</a></h3>
+            <div class="paper-authors">with Simon Krause (LMU)</div>
+            <div class="paper-state"><span class="paper-status">Preparing for resubmission</span> <em class="status-journal">Regional Science and Urban Economics</em></div>
+            <div class="paper-links">
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-proximity">Abstract</button>
+                <a href="https://www.dropbox.com/scl/fi/5r0s4dh3giys8pem7pdu1/Alipour_etal_revaluing_proximity.pdf?rlkey=8tjshege9smi8tcfhgu2yjkjz&amp;raw=1" target="_blank" rel="noopener">Paper (PDF)</a>
+            </div>
+            <div class="paper-abstract" id="abs-proximity" hidden="until-found">How does the persistent shift from office to remote work affect housing prices within cities? We estimate the effect of work from home (WFH) on local housing prices using over 20 million geocoded property listings across 50 German metropolitan areas (MAs) from 2014 to 2023. Identification exploits differences in exposure to the 2020 WFH shock, determined by the teleworkability of residents' jobs. Using a DiD design, we find that WFH persistently reduces the price premium for central locations within MAs. A central result is that WFH reduces within-city housing price inequality beyond the mere flattening of the distance gradient. The effect is driven by the demand side: fewer workers move into central postcodes characterised by a high concentration of residents with teleworkable jobs. We find that access to remote work reduced the appreciation of amenities typically valued by office workers, including public transportation.</div>
+        </article>
+        <article class="paper-item">
+            <h3 class="paper-title"><a href="https://www.dropbox.com/s/sttjc24cculgqv4/alipouretal_future_of_work.pdf?raw=1" target="_blank" rel="noopener">Working from Home and Consumption in Cities</a></h3>
+            <div class="paper-authors">with Oliver Falck (LMU), Simon Krause (LMU), Carla Krolage (U Regensburg), and Sebastian Wichert (ifo)</div>
+            <div class="paper-state"><span class="paper-status">Preparing for resubmission</span> <em class="status-journal">Journal of Economic Geography</em></div>
+            <div class="paper-links">
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-consumption">Abstract</button>
+                <a href="https://www.dropbox.com/s/sttjc24cculgqv4/alipouretal_future_of_work.pdf?raw=1" target="_blank" rel="noopener">Paper (PDF)</a>
+                <a href="https://www.ifo.de/en/cesifo/publications/2026/working-paper/working-home-and-consumption-cities" target="_blank" rel="noopener">CESifo WP 10000</a>
+            </div>
+            <div class="paper-abstract" id="abs-consumption" hidden="until-found">We estimate the impact of the Big Shift to working from home (WFH) on offline consumer spending within cities. The analysis builds on a postcode-level panel (2019–2023) of novel cellphone mobility and payment card transaction data for 50 German metropolitan areas (MAs). Identification uses local differences in the exposure to the WFH shock, measured by neighbourhoods' WFH potential: the fraction of residents with a teleworkable job. Difference-in-differences estimates show that higher WFH potential leads to persistent declines in morning mobility and higher local spending within MAs. We estimate an elasticity of spending with respect to WFH-induced mobility changes of −3.7%, driven by large MAs. Unlike in the US, the WFH shock did not spur business turnover, urban outmigration, or a sustained shift to e-commerce in Germany. We conclude that WFH primarily reshapes urban consumption by reallocating where people spend time.</div>
+        </article>
+        <article class="paper-item">
+            <h3 class="paper-title"><a href="https://www.dropbox.com/scl/fi/a8em22vik2zeimbek5h0h/manuscript_current.pdf?rlkey=5sn0qoga0rgady6kf6ewynntm&amp;raw=1" target="_blank" rel="noopener">Performance Pay in the Hybrid Work Economy</a></h3>
+            <div class="paper-state"><span class="paper-status">Under review</span></div>
+            <div class="paper-links">
+                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-perfpay">Abstract</button>
+                <a href="https://www.dropbox.com/scl/fi/a8em22vik2zeimbek5h0h/manuscript_current.pdf?rlkey=5sn0qoga0rgady6kf6ewynntm&amp;raw=1" target="_blank" rel="noopener">Paper (PDF)</a>
+            </div>
+            <div class="paper-abstract" id="abs-perfpay" hidden="until-found">The large-scale rise of working from home (WFH) has granted workers unprecedented autonomy over how they allocate their time and effort, while weakening employers' monitoring ability. We ask whether firms use performance-based compensation to align workers' incentives when adopting WFH. To isolate the causal impact of WFH, we use individual-level panel data and exploit workers' exposure to the WFH shock in 2020 through their 2019 job's WFH feasibility. Results show that WFH significantly raises the incidence of performance pay and its share in annual earnings between 2019 and 2023, consistent with principal-agent theory. The shift is concentrated among men and workers without collectively bargained wages. WFH simultaneously reduces uncompensated overtime, particularly in the groups with stronger shifts to performance pay. The pattern is expected when implicit incentives (overtime as a worker-quality signal) are replaced by explicit performance-based contracts (bonus for output). We find evidence for selection on gains, where those more easily induced to WFH are also more likely to adopt performance pay.</div>
         </article>
 
         <h2 class="section-title" id="work-in-progress">Work in Progress</h2>
-
         <article class="paper-item">
-            <h3 class="paper-title"><a href="https://www.dropbox.com/scl/fi/vyzxwypgb00c3notmcb9o/alipour_wfh_gender_inequality.pdf?rlkey=23vs390fje2y57ixplmuopv2r&amp;st=fsbh10rp&amp;dl=0" target="_blank" rel="noopener">Does Remote Work Reinforce Gender Gaps in (Un)paid Labor?</a></h3>
-            <span class="paper-status">Preparing for resubmission · Journal of Human Resources</span>
-            <div class="paper-links">
-                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-gender">Abstract</button>
-                <a href="https://www.dropbox.com/scl/fi/vyzxwypgb00c3notmcb9o/alipour_wfh_gender_inequality.pdf?rlkey=23vs390fje2y57ixplmuopv2r&amp;st=fsbh10rp&amp;dl=0" target="_blank" rel="noopener">Paper</a>
-            </div>
-            <div class="paper-abstract" id="abs-gender" hidden>I study how the rise in working from home (WFH) affects the gender division of paid and unpaid labor (caregiving, domestic tasks). Identification uses differences in individuals' exposure to the Covid-induced WFH shock, measured by the WFH feasibility of their job in 2019. Using panel data from the German SOEP, I estimate 2SLS models that instrument realized WFH in 2022 with WFH feasibility. Results show that WFH reduces paid hours and increases domestic work and leisure (including sleep) among women. Men's time use remains largely unchanged, partly because WFH induces moves toward larger, more distant homes, offsetting commuting time savings. Within-couple analyses confirm that the Big Shift to WFH intensifies gender gaps in paid and unpaid work, particularly caregiving. I find that gender norms, bargaining power, and childcare demands interact with WFH in ways that reinforce the unequal division of labor.</div>
-        </article>
-
-        <article class="paper-item">
-            <h3 class="paper-title"><a href="https://www.dropbox.com/scl/fi/5r0s4dh3giys8pem7pdu1/Alipour_etal_revaluing_proximity.pdf?rlkey=8tjshege9smi8tcfhgu2yjkjz&amp;dl=0" target="_blank" rel="noopener">Revaluing Proximity: Working from Home and the Spatial Distribution of Urban Housing Prices</a></h3>
-            <div class="paper-authors">with Simon Krause (LMU)</div>
-            <span class="paper-status">Preparing for resubmission · Regional Science and Urban Economics</span>
-            <div class="paper-links">
-                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-proximity">Abstract</button>
-                <a href="https://www.dropbox.com/scl/fi/5r0s4dh3giys8pem7pdu1/Alipour_etal_revaluing_proximity.pdf?rlkey=8tjshege9smi8tcfhgu2yjkjz&amp;dl=0" target="_blank" rel="noopener">Paper</a>
-            </div>
-            <div class="paper-abstract" id="abs-proximity" hidden>How does the persistent shift from office to remote work affect housing prices within cities? We estimate the effect of work from home (WFH) on local housing prices using over 20 million geocoded property listings across 50 German metropolitan areas (MAs) from 2014 to 2023. Identification exploits differences in exposure to the 2020 WFH shock, determined by the teleworkability of residents' jobs. Using a DiD design, we find that WFH persistently reduces the price premium for central locations within MAs. A central result is that WFH reduces within-city housing price inequality beyond the mere flattening of the distance gradient. The effect is driven by the demand side: fewer workers move into central postcodes characterised by a high concentration of residents with teleworkable jobs. We find that access to remote work reduced the appreciation of amenities typically valued by office workers, including public transportation.</div>
-        </article>
-
-        <article class="paper-item">
-            <h3 class="paper-title"><a href="https://www.dropbox.com/s/sttjc24cculgqv4/alipouretal_future_of_work.pdf?dl=0" target="_blank" rel="noopener">Working from Home and Consumption in Cities</a></h3>
-            <div class="paper-authors">with Oliver Falck (LMU), Simon Krause (LMU), Carla Krolage (U Regensburg), and Sebastian Wichert (ifo)</div>
-            <span class="paper-status">Preparing for resubmission · Journal of Economic Geography</span>
-            <div class="paper-links">
-                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-consumption">Abstract</button>
-                <a href="https://www.dropbox.com/s/sttjc24cculgqv4/alipouretal_future_of_work.pdf?dl=0" target="_blank" rel="noopener">Paper</a>
-            </div>
-            <div class="paper-abstract" id="abs-consumption" hidden>We estimate the impact of the Big Shift to working from home (WFH) on offline consumer spending within cities. The analysis builds on a postcode-level panel (2019–2023) of novel cellphone mobility and payment card transaction data for 50 German metropolitan areas (MAs). Identification uses local differences in the exposure to the WFH shock, measured by neighbourhoods' WFH potential: the fraction of residents with a teleworkable job. Difference-in-differences estimates show that higher WFH potential leads to persistent declines in morning mobility and higher local spending within MAs. We estimate an elasticity of spending with respect to WFH-induced mobility changes of −3.7%, driven by large MAs. Unlike in the US, the WFH shock did not spur business turnover, urban outmigration, or a sustained shift to e-commerce in Germany. We conclude that WFH primarily reshapes urban consumption by reallocating where people spend time.</div>
-        </article>
-
-        <article class="paper-item">
-            <h3 class="paper-title"><a href="https://www.dropbox.com/scl/fi/a8em22vik2zeimbek5h0h/manuscript_current.pdf?rlkey=5sn0qoga0rgady6kf6ewynntm&amp;dl=0" target="_blank" rel="noopener">Performance Pay in the Hybrid Work Economy</a></h3>
-            <span class="paper-status">Under review</span>
-            <div class="paper-links">
-                <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-perfpay">Abstract</button>
-                <a href="https://www.dropbox.com/scl/fi/a8em22vik2zeimbek5h0h/manuscript_current.pdf?rlkey=5sn0qoga0rgady6kf6ewynntm&amp;dl=0" target="_blank" rel="noopener">Paper</a>
-            </div>
-            <div class="paper-abstract" id="abs-perfpay" hidden>The large-scale rise of working from home (WFH) has granted workers unprecedented autonomy over how they allocate their time and effort, while weakening employers' monitoring ability. We ask whether firms use performance-based compensation to align workers' incentives when adopting WFH. To isolate the causal impact of WFH, we use individual-level panel data and exploit workers' exposure to the WFH shock in 2020 through their 2019 job's WFH feasibility. Results show that WFH significantly raises the incidence of performance pay and its share in annual earnings between 2019 and 2023, consistent with principal-agent theory. The shift is concentrated among men and workers without collectively bargained wages. WFH simultaneously reduces uncompensated overtime, particularly in the groups with stronger shifts to performance pay. The pattern is expected when implicit incentives (overtime as a worker-quality signal) are replaced by explicit performance-based contracts (bonus for output). We find evidence for selection on gains, where those more easily induced to WFH are also more likely to adopt performance pay.</div>
-        </article>
-
-        <article class="paper-item">
-            <h3 class="paper-title">Abolishing Wine O'Clock: The Long-Term Consequences of Sober Schooling</h3>
+            <h3 class="paper-title">Abolishing Wine O&#x27;Clock: The Long-Term Consequences of Sober Schooling</h3>
             <div class="paper-authors">with Seongwon Im (LMU)</div>
-            <span class="paper-status">Draft coming soon</span>
+            <div class="paper-state"><span class="paper-status">Draft coming soon</span></div>
             <div class="paper-links">
                 <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-wine">Abstract</button>
-                <a href="https://www.dropbox.com/scl/fi/nz4qfv1v6x55n4ifti5u2/WineOclock_2024.pdf?rlkey=4d7rssf9rfhgegt0wdijzpmye&amp;dl=0" target="_blank" rel="noopener">Slides</a>
+                <a href="https://www.dropbox.com/scl/fi/nz4qfv1v6x55n4ifti5u2/WineOclock_2024.pdf?rlkey=4d7rssf9rfhgegt0wdijzpmye&amp;raw=1" target="_blank" rel="noopener">Slides (PDF)</a>
             </div>
-            <div class="paper-abstract" id="abs-wine" hidden>We study the long-term consequences of a controversial public health reform in 1956 France: banning the serving of alcohol in school canteens to children under age 14. We use rich survey data and a regression discontinuity design across school cohort assignment to compare health outcomes of similar adults with different exposure to in-school alcohol. We find that one additional year without alcohol in school significantly improves self-reported health and lowers the incidence of chronic disease by 5 pp. Adult drinking and smoking behaviour are not different among more and less exposed individuals, likely a direct consequence of health effects. We find no evidence that the children of individuals with one year less alcohol exposure in school are healthier than those with higher exposure.</div>
+            <div class="paper-abstract" id="abs-wine" hidden="until-found">We study the long-term consequences of a controversial public health reform in 1956 France: banning the serving of alcohol in school canteens to children under age 14. We use rich survey data and a regression discontinuity design across school cohort assignment to compare health outcomes of similar adults with different exposure to in-school alcohol. We find that one additional year without alcohol in school significantly improves self-reported health and lowers the incidence of chronic disease by 5 pp. Adult drinking and smoking behaviour are not different among more and less exposed individuals, likely a direct consequence of health effects. We find no evidence that the children of individuals with one year less alcohol exposure in school are healthier than those with higher exposure.</div>
         </article>
-
         <article class="paper-item">
             <h3 class="paper-title">Skill Demand in the Hybrid Work Economy</h3>
             <div class="paper-authors">with Christina Langer (Stanford)</div>
-            <span class="paper-status">Draft coming soon</span>
+            <div class="paper-state"><span class="paper-status">Draft coming soon</span></div>
             <div class="paper-links">
                 <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-skills">Abstract</button>
             </div>
-            <div class="paper-abstract" id="abs-skills" hidden>Recruiting the “right” talent has become a central challenge since the Big Shift to working from home (WFH), one of the most significant transformations in modern labor markets. Using job vacancy data from 2019–2023 and an instrumental variable approach, we estimate how firms' adoption of WFH changes skill requirements in hiring. Results show that postings offering WFH list a larger number of and more detailed skills: Demand increases for skills complementary to remote production (basic digital proficiency, online communication) and for “character” attributes related to self-management (e.g., ability to work independently), consistent with principal–agent models under moral hazard. Our findings illustrate how the “ideal employee” profile shifts with WFH, documenting organizational adaptations consistent with skill-biased technological change. This has implications for the distribution of economic opportunities: WFH relaxes geographic barriers to high-wage jobs but raises demand for digital and self-management skills, risking exclusion of workers lacking them. The paper thus informs education policy, including curriculum design and reskilling programs to build human capital for the hybrid work economy.</div>
+            <div class="paper-abstract" id="abs-skills" hidden="until-found">Recruiting the “right” talent has become a central challenge since the Big Shift to working from home (WFH), one of the most significant transformations in modern labor markets. Using job vacancy data from 2019–2023 and an instrumental variable approach, we estimate how firms' adoption of WFH changes skill requirements in hiring. Results show that postings offering WFH list a larger number of and more detailed skills: Demand increases for skills complementary to remote production (basic digital proficiency, online communication) and for “character” attributes related to self-management (e.g., ability to work independently), consistent with principal–agent models under moral hazard. Our findings illustrate how the “ideal employee” profile shifts with WFH, documenting organizational adaptations consistent with skill-biased technological change. This has implications for the distribution of economic opportunities: WFH relaxes geographic barriers to high-wage jobs but raises demand for digital and self-management skills, risking exclusion of workers lacking them. The paper thus informs education policy, including curriculum design and reskilling programs to build human capital for the hybrid work economy.</div>
         </article>
-
         <article class="paper-item">
             <h3 class="paper-title">Working from Home and Health-Related Absenteeism</h3>
-            <div class="paper-authors">with Katharina Bettig, Kamila Cygan-Rehm, Christian Leßmann, and Valentin Lindlacher (all TU Dresden)</div>
-            <span class="paper-status">Draft coming soon</span>
+            <div class="paper-authors">with Katharina Bettig, Kamila Cygan-Rehm, Christian Leßmann, and <a href="https://lindlacher.com/" target="_blank" rel="noopener">Valentin Lindlacher</a> (all TU Dresden)</div>
+            <div class="paper-state"><span class="paper-status">Draft coming soon</span></div>
             <div class="paper-links">
                 <button class="abstract-toggle" type="button" onclick="toggleAbstract(this)" aria-expanded="false" aria-controls="abs-sick">Abstract</button>
             </div>
-            <div class="paper-abstract" id="abs-sick" hidden>We study the causal impact of working from home (WFH) on sick leave using individual-level data on healthcare use between 2019 and 2023 from a large statutory health insurer. Identification uses differences in individuals' exposure to the Covid-induced WFH shock, captured by the teleworkability of their occupation before March 2020. Difference-in-differences results show that individuals with access to WFH experience a persistent reduction in sickness absenteeism, primarily through fewer short-term sick leaves due to minor infections and musculoskeletal problems (e.g., back pain).</div>
+            <div class="paper-abstract" id="abs-sick" hidden="until-found">We study the causal impact of working from home (WFH) on sick leave using individual-level data on healthcare use between 2019 and 2023 from a large statutory health insurer. Identification uses differences in individuals' exposure to the Covid-induced WFH shock, captured by the teleworkability of their occupation before March 2020. Difference-in-differences results show that individuals with access to WFH experience a persistent reduction in sickness absenteeism, primarily through fewer short-term sick leaves due to minor infections and musculoskeletal problems (e.g., back pain).</div>
         </article>
-
-        <footer class="site-footer">
-            <p>Jean-Victor Alipour · ifo Institute, Poschingerstr. 5, 81679 Munich</p>
-            <p><a href="mailto:alipour@ifo.de">alipour@ifo.de</a></p>
-        </footer>
     </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p>Jean-Victor Alipour · ifo Institute, Poschingerstr. 5, 81679 Munich · <a href="mailto:alipour@ifo.de">alipour@ifo.de</a></p>
+            <p>Last updated October 2026</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

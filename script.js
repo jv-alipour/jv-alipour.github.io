@@ -1,18 +1,48 @@
 // Mobile menu
-function toggleMenu() {
+function setMenu(open) {
     var links = document.getElementById('navLinks');
     var button = document.querySelector('.menu-toggle');
-    var open = links.classList.toggle('open');
+    if (!links || !button) return;
+    links.classList.toggle('open', open);
     button.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
 
-// Abstract toggles
+function toggleMenu() {
+    setMenu(!document.getElementById('navLinks').classList.contains('open'));
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setMenu(false);
+});
+
+document.addEventListener('click', function (e) {
+    if (!e.target.closest('.site-nav') || e.target.closest('#navLinks a')) setMenu(false);
+});
+
+// Abstract / BibTeX toggles. Collapsed panels use hidden="until-found",
+// so the browser's find-in-page can still reach (and open) them.
 function toggleAbstract(button) {
-    var abstract = document.getElementById(button.getAttribute('aria-controls'));
-    var open = abstract.hidden;
-    abstract.hidden = !open;
+    var panel = document.getElementById(button.getAttribute('aria-controls'));
+    var open = panel.hasAttribute('hidden');
+    if (open) panel.removeAttribute('hidden');
+    else panel.setAttribute('hidden', 'until-found');
     button.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
+
+document.querySelectorAll('.paper-abstract, .paper-bibtex').forEach(function (panel) {
+    panel.addEventListener('beforematch', function () {
+        var button = document.querySelector('[aria-controls="' + panel.id + '"]');
+        if (button) button.setAttribute('aria-expanded', 'true');
+    });
+});
+
+// Announce links that open in a new tab
+document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+    var note = document.createElement('span');
+    note.className = 'visually-hidden';
+    note.textContent = ' (opens in new tab)';
+    a.appendChild(note);
+});
 
 // Light / dark theme
 (function () {
@@ -50,4 +80,31 @@ function toggleAbstract(button) {
     }
     if (img.complete && img.naturalWidth === 0) fallback();
     else img.addEventListener('error', fallback);
+})();
+
+// Media page: filter by type
+(function () {
+    var group = document.querySelector('.filters');
+    if (!group) return;
+    var buttons = group.querySelectorAll('button');
+    var empty = document.querySelector('.media-empty');
+
+    group.addEventListener('click', function (e) {
+        var button = e.target.closest('button');
+        if (!button) return;
+        var f = button.dataset.f;
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === button ? 'true' : 'false'); });
+
+        var shown = 0;
+        document.querySelectorAll('.media-year').forEach(function (year) {
+            var visible = 0;
+            year.querySelectorAll('li[data-kind]').forEach(function (li) {
+                li.hidden = !(f === 'all' || li.dataset.kind === f);
+                if (!li.hidden) visible++;
+            });
+            year.hidden = visible === 0;
+            shown += visible;
+        });
+        if (empty) empty.hidden = shown !== 0;
+    });
 })();
