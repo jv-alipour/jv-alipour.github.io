@@ -352,6 +352,7 @@ nav.site-nav {
 }
 
 .bio p { margin: 0 0 1rem; }
+.bio strong { font-weight: 600; color: var(--text); }
 
 /* --------------------------------------------------------------------------
    Section index
