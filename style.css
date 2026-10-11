@@ -81,6 +81,13 @@ a {
     text-underline-offset: 3px;
 }
 a:hover { text-decoration: underline; }
+/* in-text links: visible underline so they do not rely on colour alone (WCAG 1.4.1) */
+.bio a, .news-item p a, .paper-meta a, .page-intro a, .section-note a {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    text-underline-offset: 3px;
+}
+.bio a:hover, .news-item p a:hover, .paper-meta a:hover, .page-intro a:hover, .section-note a:hover { text-decoration-color: currentColor; }
 
 button { font: inherit; }
 
@@ -228,6 +235,7 @@ nav.site-nav {
     scroll-margin-top: 5rem;
 }
 .section-title:not(:first-child) { margin-top: 3.5rem; }
+h1.section-title { border-bottom: 0; padding-bottom: 0; font-size: 2.4rem; margin-bottom: 1rem; }
 
 .section-note {
     color: var(--muted);
@@ -318,14 +326,7 @@ nav.site-nav {
 }
 .aff b { font-weight: 600; }
 .aff > span { color: var(--muted); }
-.aff-label { color: var(--faint); }
 
-.aff-links { display: flex; flex-wrap: wrap; }
-.aff-links a + a::before {
-    content: "·";
-    color: var(--faint);
-    margin: 0 0.5rem;
-}
 
 .cta {
     display: flex;
@@ -378,7 +379,7 @@ nav.site-nav {
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--faint);
 }
 .news-list {
     list-style: none;
@@ -425,14 +426,12 @@ nav.site-nav {
 }
 .news-date {
     display: inline-block;
+    font-family: var(--mono);
     font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 3px;
-    padding: 0.05rem 0.5rem;
-    margin-bottom: 0.35rem;
+    color: var(--faint);
+    margin-bottom: 0.2rem;
 }
+.news-item.is-new .news-date { color: var(--accent); font-weight: 600; }
 .news-item p { margin: 0; font-size: 0.9rem; line-height: 1.6; }
 .news-item strong { font-weight: 600; color: var(--text); }
 .news-item p a { font-weight: 500; }
@@ -447,6 +446,7 @@ nav.site-nav {
     margin-right: -0.6rem;
     padding-right: 0.6rem;
 }
+.news-scroll:not(:has(.news-item:nth-child(5))) { max-height: none; overflow: visible; margin-right: 0; padding-right: 0; }
 .news-scroll.has-more {
     -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 3.5rem), transparent);
     mask-image: linear-gradient(to bottom, #000 calc(100% - 3.5rem), transparent);
@@ -508,8 +508,8 @@ nav.site-nav {
     line-height: 1.3;
     margin: 0 0 0.3rem;
 }
-.paper-title a { color: var(--text); }
-.paper-title a:hover { color: var(--accent); }
+.paper-title a, a.entry-title { color: var(--text); text-decoration: underline; text-decoration-color: var(--line); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.paper-title a:hover, a.entry-title:hover { color: var(--accent); text-decoration-color: currentColor; }
 
 .paper-authors {
     color: var(--muted);
@@ -540,8 +540,8 @@ nav.site-nav {
 }
 
 .status-journal {
-    font-family: var(--serif);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-style: italic;
     color: var(--muted);
 }
 
@@ -944,6 +944,12 @@ span.media-outlet { color: var(--text); }
     .nav-links a::after { display: none; }
 
     .theme-label { display: none; }
+    /* tap targets >= 44px */
+    .menu-toggle, .theme-toggle { min-width: 44px; min-height: 44px; justify-content: center; align-items: center; }
+    .icon-link { padding: 0.6rem; }
+    .abstract-toggle { padding: 0.35rem 0.75rem; font-size: 0.85rem; }
+    .news-scroll { max-height: none; overflow: visible; margin-right: 0; padding-right: 0; }
+    .news-scroll.has-more, .news-scroll.has-prev { -webkit-mask-image: none; mask-image: none; }
 
     .hero {
         grid-template-columns: 1fr;
@@ -951,7 +957,7 @@ span.media-outlet { color: var(--text); }
     }
     /* phone/tablet: photo, then name and bio, then the mini CV */
     .profile-section { display: contents; }
-    .profile-img, .profile-fallback { max-width: 220px; order: 0; }
+    .profile-img, .profile-fallback { max-width: 160px; order: 0; }
     .content-section { order: 1; }
     .mini-cv { order: 2; margin-top: 0; }
     .profile-fallback { display: none; }
