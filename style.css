@@ -642,6 +642,10 @@ span.media-outlet { color: var(--text); }
 .shot-side img { aspect-ratio: auto; object-fit: contain; }
 
 .entry-meta .outlet { color: var(--text); font-weight: 600; }
+.entry-meta a.coauthor,
+.paper-authors a.coauthor { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+.entry-meta a.coauthor:hover,
+.paper-authors a.coauthor:hover { color: var(--accent); text-decoration-color: currentColor; }
 
 .shot-inline {
     max-width: 260px;
