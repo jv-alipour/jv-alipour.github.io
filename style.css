@@ -591,6 +591,52 @@ span.media-outlet { color: var(--text); }
 .media-empty { color: var(--muted); padding: 1rem 0; }
 
 /* --------------------------------------------------------------------------
+   TV screenshots
+   -------------------------------------------------------------------------- */
+
+.shot {
+    margin: 0;
+}
+.shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4px;
+    background: var(--surface);
+}
+.shot a:hover img { outline: 2px solid var(--accent); outline-offset: 2px; }
+.shot figcaption {
+    margin-top: 0.45rem;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: var(--faint);
+}
+.shot figcaption b { color: var(--text); font-weight: 600; }
+.shot figcaption span { display: block; color: var(--muted); }
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.25rem;
+    margin: 0 0 1.75rem;
+}
+
+.shot-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+    gap: 1rem;
+    margin-top: 0.8rem;
+}
+
+.shot-inline {
+    max-width: 260px;
+    margin-top: 0.8rem;
+}
+.shot-inline img { aspect-ratio: auto; object-fit: contain; }
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 
