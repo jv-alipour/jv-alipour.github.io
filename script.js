@@ -128,3 +128,17 @@ document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
         apply();
     });
 })();
+
+// News: fade the bottom edge while older items remain below
+(function () {
+    var box = document.querySelector('.news-scroll');
+    if (!box) return;
+    function update() {
+        var more = box.scrollHeight - box.clientHeight - box.scrollTop > 4;
+        box.classList.toggle('has-more', more);
+        box.classList.toggle('has-prev', box.scrollTop > 4);
+    }
+    box.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+})();

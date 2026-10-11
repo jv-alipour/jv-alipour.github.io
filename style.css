@@ -435,15 +435,36 @@ nav.site-nav {
 }
 .news-item p { margin: 0; font-size: 0.9rem; line-height: 1.6; }
 .news-item strong { font-weight: 600; color: var(--text); }
-.news-more {
-    display: inline-block;
-    margin-top: 0.35rem;
-    font-size: 0.9rem;
-    font-weight: 500;
+.news-item p a { font-weight: 500; }
+
+/* show the newest ~3 items; older ones are reached by scrolling and fade with age */
+.news-scroll {
+    max-height: 21rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+    margin-right: -0.6rem;
+    padding-right: 0.6rem;
 }
-.news-more span { display: inline-block; transition: transform 0.2s ease; }
-.news-more:hover { text-decoration: none; }
-.news-more:hover span { transform: translateX(3px); }
+.news-scroll.has-more {
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 3.5rem), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 3.5rem), transparent);
+}
+.news-scroll.has-prev {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 2.5rem);
+    mask-image: linear-gradient(to bottom, transparent, #000 2.5rem);
+}
+.news-scroll.has-prev.has-more {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 2.5rem, #000 calc(100% - 3.5rem), transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 2.5rem, #000 calc(100% - 3.5rem), transparent);
+}
+.news-item { transition: opacity 0.2s ease; }
+.news-item:nth-child(3) { opacity: 0.85; }
+.news-item:nth-child(4) { opacity: 0.7; }
+.news-item:nth-child(n+5) { opacity: 0.55; }
+.news-item:hover,
+.news-item:focus-within { opacity: 1; }
 
 /* --------------------------------------------------------------------------
    Section index
