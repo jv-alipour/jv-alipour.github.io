@@ -632,6 +632,17 @@ span.media-outlet { color: var(--text); }
     margin-top: 0.8rem;
 }
 
+.paper-item.has-figure {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 0.5rem 2rem;
+    align-items: start;
+}
+.shot-side { margin: 0.2rem 0 0; }
+.shot-side img { aspect-ratio: auto; object-fit: contain; }
+
+.entry-meta .outlet { color: var(--text); font-weight: 600; }
+
 .shot-inline {
     max-width: 260px;
     margin-top: 0.8rem;
@@ -803,6 +814,9 @@ span.media-outlet { color: var(--text); }
     }
     .profile-section { max-width: 220px; }
     .profile-section:has(.profile-fallback) { display: none; }
+
+    .paper-item.has-figure { grid-template-columns: 1fr; }
+    .shot-side { max-width: 260px; margin-top: 0.6rem; }
 
     .main-container { padding-top: 2rem; }
 
