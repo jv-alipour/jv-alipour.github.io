@@ -82,29 +82,49 @@ document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
     else img.addEventListener('error', fallback);
 })();
 
-// Media page: filter by type
+// Media page: filter by type and/or outlet
 (function () {
-    var group = document.querySelector('.filters');
-    if (!group) return;
-    var buttons = group.querySelectorAll('button');
+    var types = document.querySelector('.filters');
+    var outlets = document.querySelector('.outlet-badges');
+    if (!types) return;
     var empty = document.querySelector('.media-empty');
+    var kind = 'all';
+    var outlet = null;
 
-    group.addEventListener('click', function (e) {
-        var button = e.target.closest('button');
-        if (!button) return;
-        var f = button.dataset.f;
-        buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === button ? 'true' : 'false'); });
-
+    function apply() {
+        types.querySelectorAll('button').forEach(function (b) {
+            b.setAttribute('aria-pressed', b.dataset.f === kind ? 'true' : 'false');
+        });
+        if (outlets) outlets.querySelectorAll('button').forEach(function (b) {
+            b.setAttribute('aria-pressed', b.dataset.outlet === outlet ? 'true' : 'false');
+        });
         var shown = 0;
         document.querySelectorAll('.media-year').forEach(function (year) {
             var visible = 0;
             year.querySelectorAll('li[data-kind]').forEach(function (li) {
-                li.hidden = !(f === 'all' || li.dataset.kind === f);
+                var okKind = kind === 'all' || li.dataset.kind === kind;
+                var okOutlet = !outlet || (' ' + li.dataset.outlet + ' ').indexOf(' ' + outlet + ' ') !== -1;
+                li.hidden = !(okKind && okOutlet);
                 if (!li.hidden) visible++;
             });
             year.hidden = visible === 0;
             shown += visible;
         });
         if (empty) empty.hidden = shown !== 0;
+    }
+
+    types.addEventListener('click', function (e) {
+        var button = e.target.closest('button');
+        if (!button) return;
+        kind = button.dataset.f;
+        if (kind === 'all') outlet = null;
+        apply();
+    });
+
+    if (outlets) outlets.addEventListener('click', function (e) {
+        var button = e.target.closest('button');
+        if (!button) return;
+        outlet = outlet === button.dataset.outlet ? null : button.dataset.outlet;
+        apply();
     });
 })();
