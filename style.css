@@ -438,7 +438,7 @@ h1.section-title { border-bottom: 0; padding-bottom: 0; font-size: 2.4rem; margi
 
 /* show the newest ~3 items; older ones are reached by scrolling and fade with age */
 .news-scroll {
-    max-height: 21rem;
+    max-height: 16rem;
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-width: thin;
@@ -446,7 +446,6 @@ h1.section-title { border-bottom: 0; padding-bottom: 0; font-size: 2.4rem; margi
     margin-right: -0.6rem;
     padding-right: 0.6rem;
 }
-.news-scroll:not(:has(.news-item:nth-child(5))) { max-height: none; overflow: visible; margin-right: 0; padding-right: 0; }
 .news-scroll.has-more {
     -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 3.5rem), transparent);
     mask-image: linear-gradient(to bottom, #000 calc(100% - 3.5rem), transparent);
@@ -948,8 +947,7 @@ span.media-outlet { color: var(--text); }
     .menu-toggle, .theme-toggle { min-width: 44px; min-height: 44px; justify-content: center; align-items: center; }
     .icon-link { padding: 0.6rem; }
     .abstract-toggle { padding: 0.35rem 0.75rem; font-size: 0.85rem; }
-    .news-scroll { max-height: none; overflow: visible; margin-right: 0; padding-right: 0; }
-    .news-scroll.has-more, .news-scroll.has-prev { -webkit-mask-image: none; mask-image: none; }
+    .news-scroll { max-height: 22rem; }
 
     .hero {
         grid-template-columns: 1fr;
