@@ -845,10 +845,14 @@ span.media-outlet { color: var(--text); }
 
 .sub-head {
     font-family: var(--serif);
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    margin: 2.25rem 0 0.5rem;
+    line-height: 1.2;
+    margin: 3rem 0 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
 }
+h1 + .sub-head { margin-top: 1.5rem; }
 
 .featured-list li.featured {
     background: var(--surface);
